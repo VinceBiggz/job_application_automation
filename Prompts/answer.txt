@@ -1,0 +1,34 @@
+1. Scraping method: Are we targeting RSS feeds. For example - https://weworkremotely.com/remote-jobs.rss
+2. Scope of filters: Keyword matching should check everything Title, Snippet, Company/Location etc.
+3. The Active column in Sources and Filters tab is a checkbox. If the checkbox is checked, it means Active.
+4. Scoring model: It is purely additive i.e. the sum of keyword weights. Let's keep it simple for now.
+5. Notifications: The digest email should be a html table. Format the email to be in html and have a table with the relevant columns.
+6. Frequency: We'll create triggers to run the script. However, we'll also create a menu item in the sheet to run the script on demand as well.
+7. Status values: We'll have these values - New, Notified, Applied, Interviewing, Rejected, Ignore. By default, the status will be New. However, based upon the score, we can set it as Ignore as well. Upon successful notification, we can change the status to Notified.
+8. Error Handling: Ensure proper error handling including try/catch blocks and graceful exits upon failed fetching. Include logs and notifications as well.
+9. Auth and anti-bot issues - You'll suggest the best approach for this.
+10. Ensure we don't notify for the same job twice.
+11. Ensure the code is optimized for performance.
+
+The filters table has these items:
+CIO	10	title
+CTO	9	title
+Chief Information Officer	10	any
+Head of IT	8	title
+Head of Technology	8	title
+Director of IT	7	title
+VP of IT	7	title
+IT Director	7	title
+Head of Infrastructure	6	any
+Head of Cybersecurity	8	any
+Cloud Operations	5	any
+Remote	4	any
+Senior	8	any
+Manager	8	any
+Junior	-10	negative
+Intern	-20	negative
+Entry-level	-20	negative
+
+I hope this clarifies things. Don't generate any code yet until I explicitly tell you, because I have special instructions regarding how I want the code generated.
+
+Ask for any other clarifications if you have any. If you have no further questions, ask me for the coding instructions.

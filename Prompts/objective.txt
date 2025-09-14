@@ -1,0 +1,58 @@
+I’m working on an automation project where we’re building a  Google Apps Script-based Job Aggregator + Tracker system . The setup so far is:  
+
+-  Google Drive folders :  
+  - `/JobAutomation/Data/` →  Data Folder ID: '16o6hGGP337q0tXPm49-dL8glGU_UF3iy'   
+  - `/JobAutomation/Templates/` →  Templates Folder ID: '1bsLYUoRoDowtHJnM5dIoATa5ZTcmIB_m'   
+  - `/JobAutomation/Output/` →  Output Folder ID: '1aA5ATJyrH_S1IB6jRWJ1lIUlDlRlafmg'
+
+-  Google Docs :  
+  - Cover Letter Template Doc ID: '1wZAtSBmcUVD4gUYI-pWunQUZdKYpmBYLBYguG1KijdE'  
+
+-  Google Sheets :  
+  1.  Job Aggregator Sheet  →  Sheet ID: '1fwfkdyReTRCMywq6VmQT7XN5KVu0DWcBOpY0XOxgoD0' 
+     - Tabs:  
+       -  Jobs  (stores scraped results; columns: ID, DateFound, Title, Company, Location, Link, Source, Snippet, Score, MatchedKeywords, Status, DateNotified)  
+       -  Sources  (columns: SourceName, URL, Notes, Active)  
+       -  Filters  (columns: Keyword, Weight, Type, Active)  
+       -  Config  (key/value: emailRecipient, minScore, topN, dedupeBy, dateFormat)  
+       -  Templates  (for letter snippets)  
+       -  ResumeMaster  (base resume data)  
+
+  2.  Job Tracker Sheet  (also in the Data folder) →  Sheet ID: '17JJXh37KumOZNO6ZRc3ZRnESSg9LL9vVfODZKbeuB78'
+     - Columns: Job ID, Job Title, Company, Location, Source, Job URL, Date Found, Status, Cover Letter Doc ID, Notes  
+
+-  Current Stage:   
+We have the first version of the  Aggregator script  that fetches jobs from RSS feeds into the Jobs tab. Next, we need to  test the script  (possibly with a “test mode” logger), ensure the Jobs tab is populated correctly, then continue building the pipeline towards the Tracker, cover letter generation, and resume tailoring.  
+
+ What I’d like you to do now:   
+1. Confirm that you've understood what we're doing, where we're at, and what are the next steps.
+2. Generate the pseudo-code for the Aggregator Script.   
+3. Generate the Aggregetor Script.
+4. Add a  Test Mode option  for safe debugging before full data population.  
+5. Once tested, guide me on next steps for filtering and moving jobs into the Tracker tab.  
+
+ Reference Data for Testing:   
+- Example RSS feeds:  
+  - RemoteOK → https://remoteok.com/rss  
+  - WeWorkRemotely → https://weworkremotely.com/remote-jobs.rss  
+
+- Example Filters:  
+  - `engineer` | 5 | any | TRUE  
+  - `senior` | 2 | title | TRUE  
+  - `unpaid` | 3 | negative | TRUE  
+
+---
+
+ 🗂️ Roadmap Checklist:   
+- ✅ Create folders (Data, Templates, Output)  
+- ✅ Create Google Docs template (Cover Letter)  
+- ✅ Create Job Aggregator Sheet (Jobs, Sources, Filters, Config, Templates, ResumeMaster)  
+- ✅ Create Job Tracker Sheet (Job ID, Title, Company, Location, etc.)  
+- ✅ Draft Aggregator Script (RSS → Jobs tab) 
+- ⬜ Test Aggregator Script (with Test Mode)  
+- ⬜ Build logic to transfer shortlisted jobs → Tracker  
+- ⬜ Integrate Cover Letter generation (Docs output → Output folder)  
+- ⬜ Resume tailoring (using ResumeMaster tab)  
+- ⬜ Outreach automation (finding target people for follow-up)  
+
+Let me know if we're aligned before you generate any code. Please ask clarification questions.

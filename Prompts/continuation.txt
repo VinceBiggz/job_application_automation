@@ -1,0 +1,24 @@
+You are a dynamic problem solver who gets things done and thinks out of the box. You're also an expert programmer and app developer who loves solving problems using code and you're great at it.
+
+You'll act as my consultant.
+
+I want to automate my job search using Google WorkSpace i.e. Apps Scripts, Docs, Sheets, GMail etc.
+
+I have created a GSheet called Job Aggregator with this ID - '1fwfkdyReTRCMywq6VmQT7XN5KVu0DWcBOpY0XOxgoD0'
+The Sheet has the following tabs and columns:
+1. Jobs - It stores scraped results. It has the following columns: ID, DateFound, Title, Company, Location, Link, Source, Snippet, Score, MatchedKeywords, Status, DateNotified
+2. Sources - It has the sources where we'll scrape for jobs. It has the columns: SourceName, URL, Notes, Active  
+3. Filters - It contains the search filters that we'll use during scrapping. It has these columns: Keyword, Weight, Type, Active
+4. Config - This is a dictionary that has information we'll use during notifications. It has these key/value pairs in separate columns: emailRecipient/wachirakungu@gmail.com, minScore/1, topN/10, dedupeBy/link, dateFormat/yyyy-MM-dd,coverLetterDocId/1wZAtSBmcUVD4gUYI-pWunQUZdKYpmBYLBYguG1KijdE.
+5. Templates - This is for letter snippets.
+6. ResumeMaster - This has the base resume data.
+
+Using the information I've provided, I want you to tell me what you've understood, how we can use this sheet to automate our job search, and any clarification you need.
+
+Don't write a single line of code. Just tell me what you think. You can give me your algorithm or pseudo-code only, but don't generate any Apps Script code yet. I want to see your plan and your approach.
+
+Note, you can ignore tab 5 and 6 (Templates and ResumeMaster) for now. I'm interested in the sourcing of jobs first.
+
+Let me know if we're aligned.
+
+

@@ -1,0 +1,49 @@
+<!-- emailTemplate.html -->
+<!-- Author: Vincent Wachira -->
+<!-- Version: v1.0 -->
+<!-- Date: September 13, 2025 -->
+<!-- Description: HTML template for job digest emails. Includes styled table and placeholder for <%jobsTable%>. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Search Update</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f9; color: #333;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f4f4f9; padding: 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <!-- Header -->
+          <tr>
+            <td style="background-color: #007bff; padding: 20px; text-align: center; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+              <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">Job Search Update - <%= today %></h1>
+              <p style="color: #e6f0ff; margin: 8px 0 0; font-size: 14px;">Your personalized job matches</p>
+            </td>
+          </tr>
+          <!-- Body -->
+          <tr>
+            <td style="padding: 20px;">
+              <h2 style="font-size: 20px; color: #333; margin: 0 0 15px;">Top Job Matches</h2>
+              <p style="font-size: 16px; color: #555; margin: 0 0 20px;">Here are the latest opportunities tailored for you:</p>
+              <%= jobsTable %>
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f8f9fa; padding: 15px; text-align: center; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+              <p style="font-size: 14px; color: #666; margin: 0;">Sent by <strong>Job Aggregator</strong></p>
+              <p style="font-size: 14px; color: #666; margin: 8px 0;">
+                <a href="https://docs.google.com/spreadsheets/d/1fwfkdyReTRCMywq6VmQT7XN5KVu0DWcBOpY0XOxgoD0" style="color: #007bff; text-decoration: none;">View all jobs</a> | 
+                <a href="mailto:wachirakungu@gmail.com?subject=Unsubscribe from Job Aggregator" style="color: #007bff; text-decoration: none;">Unsubscribe</a>
+              </p>
+              <p style="font-size: 12px; color: #999; margin: 8px 0;">Built with &hearts; by Vincent Wachira</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
