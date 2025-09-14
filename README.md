@@ -34,7 +34,6 @@ job-aggregator-automation/
 ├── README.md # Project documentation
 ├── .gitignore # Excludes sensitive files
 
-
 ---
 
 ## 🛠️ Setup Instructions

@@ -1,0 +1,27 @@
+# Google Apps Script specific
+*.gs~
+*.html~
+
+# Sensitive files
+appsscript.json
+secrets.json
+*.secret
+*.key
+*.pem
+
+# Local configs
+.clasp.json
+.claspignore
+node_modules/
+dist/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
